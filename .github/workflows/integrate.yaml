@@ -53,9 +53,7 @@ jobs:
         run: |
             pipenv run python -m pytest --cov=yuptoo tests
 
-      - name: Run codecov
-        run: |
-          pip install codecov
-          codecov
+      - name: Upload coverage to Codecov
+        uses: codecov/codecov-action@v1
 
 
